@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build image') {
-       app = docker.build("norksx/jenkinstest")
+       app = docker.build("borismanev/jenkins-tes")
     }
     stage('Push image') {   
         docker.withRegistry('https://registry.hub.docker.com', 'docekrhub') {
